@@ -4,4 +4,4 @@
 Création du GitHub.
 Création du fichier avec le code brut.
 
-Programme pour sauvegarder les images de al recinstruction.
+Programme pour sauvegarder les images de la reconstruction.
