@@ -1,0 +1,80 @@
+import tomopy
+import dxchange
+import matplotlib.pyplot as plt
+import datetime
+import time
+#import logging
+#logging.basicConfig(level=logging.INFO)
+from imagestacks import create_animation
+from IPython.core.display import HTML
+
+
+fname = '/Users/audreyaudrey/Desktop/Projet multi/image_tomo/testpom_0001.tif'
+ind = [i+1 for i in range(181)]
+print(ind)
+print(fname)
+
+
+start = datetime.datetime.now()
+proj = dxchange.reader.read_tiff_stack(fname, ind)
+end = datetime.datetime.now() 
+duree = end - start #Pour mesurer le temps mis pour effectuer la ligne proj
+print(duree)
+
+
+#diminuer la taille des images pour diminuer le temps d'execution
+print('avant',proj.shape)
+down = tomopy.misc.morph.downsample(proj, level=1, axis=1)#axe 1 lignes: faire la moyenne des pixels 2 à 2
+down = tomopy.misc.morph.downsample(down, level=1, axis=2)# axe 2 colonnes: faire la moyenne des pixels 2 à 2
+#Avec axe 0 on aurait pris l'image complète qu'on aurait moyener avec tous les tilts ce qui aurait eu un rendu flou
+print('apres',down.shape)
+
+
+#afficher la  1ere image avant downsampling
+image0 = proj[0, :, :]#image zéro, on prend tous les pixels horizontaux et verticaux: toute la matrice des pixels
+plt.imshow(image0, cmap='Greys_r')
+plt.show()
+
+
+#afficher la  1ere image apres downsampling
+image0 = down[0, :, :]
+plt.imshow(image0, cmap='Greys_r')
+plt.show()
+
+
+anim2 = create_animation(down, size=4)# pour l'instant le code sur l'animation ne s'applique que sur des images 
+#carrées donc l'image est déformée.
+display(HTML(anim2.to_jshtml()))
+
+
+#normaliser avec loi log pour loi de beer lambert
+norm = tomopy.prep.normalize.minus_log(down, ncore=None, out=None)
+
+
+#afficher la  1ere image normalisee
+image0 = norm[0, :, :]
+plt.imshow(image0, cmap='Greys_r')
+plt.show()
+
+
+ang = tomopy.angles(180) # Generate uniformly spaced tilt angles.
+
+
+anim2 = create_animation(norm, size=4)
+display(HTML(anim2.to_jshtml()))
+
+
+start = datetime.datetime.now()
+rec = tomopy.recon(norm, ang, algorithm='gridrec') # Reconstruct object.
+end = datetime.datetime.now()
+duree = end - start
+duree
+print(duree)
+
+
+plt.imshow(rec[256,:,:],cmap='gray')
+plt.show()
+
+
+anim2 = create_animation(rec, size=4)
+display(HTML(anim2.to_jshtml()))
