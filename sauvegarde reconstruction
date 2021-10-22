@@ -1,0 +1,6 @@
+import matplotlib.image as mpim
+IMAGE="imagerec%d.png"
+for i in range (0,694):
+    fichier=IMAGE %i
+    mpimg.imsave(fichier,rec[i,100:350,100:350])
+    i=i+1
