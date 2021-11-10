@@ -4,16 +4,17 @@ from matplotlib import pyplot as plt
 from PIL import Image, ImageFilter
 %matplotlib inline
 
-
-image = cv2.imread('imagerec0.png') # permet de lire l'image
-image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV) # on converti l'image en image HSV 
+image = cv2.imread('imagerec0.png') # reads the image
+image2 = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY ) # convert BGR to RGB permet d'avoir sur 1 pixel une seule couleur et pas 3 
+plt.imshow(image2,cmap='gray') #convert to GRAY 
 
 figure_size = 9 # the dimension of the x and y axis of the kernal.
-new_image = cv2.blur(image,(figure_size, figure_size))
-
+new_image = cv2.blur(image2,(figure_size, figure_size))
 plt.figure(figsize=(11,6))
-plt.subplot(121), plt.imshow(cv2.cvtColor(image, cv2.COLOR_HSV2RGB)),plt.title('Original')
+
+plt.subplot(121),plt.imshow(image2,cmap='gray'),plt.title('Original')
 plt.xticks([]), plt.yticks([])
-plt.subplot(122), plt.imshow(cv2.cvtColor(new_image, cv2.COLOR_HSV2RGB)),plt.title('Mean filter')
+
+plt.subplot(122), plt.imshow(new_image, cmap='gray'),plt.title('Mean filter')
 plt.xticks([]), plt.yticks([])
 plt.show()
