@@ -1,0 +1,26 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import tomopy
+import dxchange
+import datetime
+import time
+import glob
+#import logging
+#logging.basicConfig(level=logging.INFO)
+from imagestacks import create_animation
+from IPython.core.display import HTML
+
+i=0
+dossier = '/Users/audreyaudrey/Desktop/Projet multi/tilt_0_180'
+num_image = [] #on definit des listes qui serviront à tracer les courbes
+for image in glob.glob(dossier+"/*.tif"):
+    print('-----------------')
+    print('image n°: ',i)
+    num_image.append(i)#ajouter à la liste num_image
+    img = cv2.imread(image)# lire l'image
+    gaussian= cv2.GaussianBlur(img,(5,5),5)
+    
+    cv2.imwrite("/Users/audreyaudrey/Desktop/Projet multi/Dossier image traitée/imtrait%i.tif"%i,gaussian)
+    
+    i+= 1
