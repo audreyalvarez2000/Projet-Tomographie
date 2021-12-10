@@ -1,0 +1,25 @@
+import cv2
+import glob
+import numpy as np
+import matplotlib.pyplot as plt
+
+i=0
+dossier = '/Users/leapommier/Desktop/imagerectiff' 
+num_image = [] #on definit des listes qui serviront à tracer les courbes
+blanc = []
+noir = []
+
+
+for i in range(0,500):
+    num_image.append(i)#ajouter à la liste num_image
+    img = cv2.imread('/Users/leapommier/Desktop/imagerectiff /imagerecdeuxiemeversion%i.tiff'%i, cv2.IMREAD_GRAYSCALE)
+    ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
+    n_white_pix = np.sum(thresh1 == 255)  #compter les pixels blancs dans l'image seuillée  
+    blanc.append(n_white_pix)
+    #print('Number of white pixels:', n_white_pix)
+    n_black_pix = np.sum(thresh1 == 0) #compter les pixels blancs dans l'image seuillée
+    noir.append(n_black_pix)
+    #print('Number of black pixels:', n_black_pix)
+    
+plt.subplot(121),plt.plot(num_image,blanc,"r")
+plt.subplot(122),plt.plot(num_image,noir,"g")
