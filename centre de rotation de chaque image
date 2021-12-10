@@ -8,4 +8,4 @@ norm = tomopy.prep.normalize.minus_log(down, ncore=None, out=None)
 ang = tomopy.angles(180)
 
 rot_center = tomopy.find_center(norm, ang, init=None, ind=0, tol=0.5)
-recon = tomopy.recon(norm, ang, center=rot_center, algorithm='gridrec')
+rec = tomopy.recon(norm, ang, center=rot_center, algorithm='gridrec')
