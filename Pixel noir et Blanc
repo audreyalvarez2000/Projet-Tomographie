@@ -17,7 +17,7 @@ for i in range(0,500):
     n_white_pix = np.sum(thresh1 == 255)  #compter les pixels blancs dans l'image seuillée  
     blanc.append(n_white_pix)
     #print('Number of white pixels:', n_white_pix)
-    n_black_pix = np.sum(thresh1 == 0) #compter les pixels blancs dans l'image seuillée
+    n_black_pix = np.sum(thresh1 == 0) #compter les pixels noirs dans l'image seuillée
     noir.append(n_black_pix)
     #print('Number of black pixels:', n_black_pix)
     
