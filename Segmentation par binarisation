@@ -1,9 +1,9 @@
 # Detection de contour avec binarisation
-# Permet de réccupérer uniquement l'objet dans l'image
-# Ouverture de l'image 
-# Création d'une image vide (image toute blanche)
-# On parcourt l'image et on test chaque pixel
-# Si la norme des 8 voisins du pixel est supérieur à une valeur seuil choisi afin d'éliminer le bruit (le fond de l'image)
+# Permet de récupérer uniquement l'objet dans l'image
+# Ouverture de l'image initial
+# Création d'une nouvelle image vide (image toute blanche)
+# On parcourt l'image initial et on test chaque pixel
+# Si la norme des 8 voisins du pixel est supérieure à une valeur seuil choisie afin d'éliminer le bruit (le fond de l'image)
 # Alors le pixel est reformé sur l'image vide en Noir. 
 
 
