@@ -1,0 +1,52 @@
+import tomopy
+import dxchange
+import matplotlib.pyplot as plt
+import datetime
+import time
+#import logging
+#logging.basicConfig(level=logging.INFO)
+from imagestacks import create_animation # permet de mettre une image en donnée dans un tableau
+from IPython.core.display import HTML
+import skimage
+import cv2
+
+
+fname='/Users/leapommier/Desktop/projet multi/tilt_0_180/carteSD120321_0000.tif'
+ind = [i for i in range(181)] 
+print(ind)
+print(fname)
+proj = dxchange.reader.read_tiff_stack(fname,ind) 
+k=0
+fftnew=[]
+img1 = proj[k,:,:]
+gray1 = img.sum(-1)
+f1= np.fft.fft2(img)
+fshift1 = np.fft.fftshift(f1)
+fft1= 20*np.log(np.abs(fshift1))
+added_image= cv2.addWeighted(fft1,0.35,fft1,0.35,0)
+
+for k in range(1,180):
+    img = proj[k,:,:]
+    gray = img.sum(-1)
+    f= np.fft.fft2(img)
+    fshift = np.fft.fftshift(f)
+    fft= 20*np.log(np.abs(fshift))
+    added_image = cv2.addWeighted(added_image,0.4,fft,0.1,0)
+
+cv2.imwrite('combined.png', added_image)
+
+f_ishift = np.fft.ifftshift(added_image)
+img_back = np.fft.ifft2(f_ishift)
+img_back = np.real(img_back)
+
+
+plt.subplot(122),plt.imshow(added_image,cmap='gray')
+plt.title('image-additionne'), plt.xticks([]), plt.yticks([])
+
+plt.subplot(121),plt.imshow(img_back,cmap='gray')
+plt.title('IFFT'), plt.xticks([]), plt.yticks([])
+
+
+
+plt.show()
+
