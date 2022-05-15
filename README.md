@@ -1,4 +1,4 @@
-| **Projet-Tomographie** | ![Logo INSA](https://jpo.insa-toulouse.fr/wp-content/uploads/2021/01/cropped-favicon.png) |
+| **Projet-Tomographie** | ![Logo INSA](https://classgift.insa-toulouse.fr/bundles/insasocle/img/logo_insa.svg) |
 | ---------------------- | ----------------------------------------------------------------------------------------- |
 
 
