@@ -1,5 +1,5 @@
 # Projet-Tomographie | ![Logo INSA](https://classgift.insa-toulouse.fr/bundles/insasocle/img/logo_insa.svg) |
-| ----------------------------------------------------------------------------------------- |
+                     | ------------------------------------------------------------------------------------ |
 
 
 ## Dans le cadre de notre quatrième année d'étude 2021-2022 à l'INSA Toulouse, il a été demandé de mener à bien un projet multidisciplinaire qui s'intitule Réalisation d'un programme Python pour reconstruction d'images de tmographie X, dont les tuteurs sont Simon Cayez et Pier Francesco Fazzini
