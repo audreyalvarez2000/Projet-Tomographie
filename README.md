@@ -1,10 +1,12 @@
-# Projet-Tomographie
+# Projet-Tomographie |![Logo INSA](https://jpo.insa-toulouse.fr/wp-content/uploads/2020/11/Logo_INSAToulouse-quadri.png)|
+
+
 
 ## Dans le cadre de notre quatrième année d'étude 2021-2022 à l'INSA Toulouse, il a été demandé de mener à bien un projet multidisciplinaire qui s'intitule Réalisation d'un programme Python pour reconstruction d'images de tmographie X, dont les tuteurs sont Simon Cayez et Pier Francesco Fazzini
 
 Ce dépôt GitHub a pour but de présenter la tomographie et d’expliquer les différents algorithmes de reconstruction réalisés avec Python et les paramètres. Les différents algorithmes étudiés sont **gridrec**, **filtered back projection** (fbp) , qui sont tous les deux des **algorithmes analytiques**, et **“BP3D_CUBA”** qui est un **algorithme itératif**. 
 
-#### Explication brève des algorithmes <span style="color: #26B260">
+#### Explication brève des algorithmes
 
 Le premier s’effectue grâce à une **transformée de Fourier** de chaque projection des images suivi d’une **interpolation** et d’une **transformée de Fourier inverse**. Le second quant à lui, ne fonctionne pas avec une interpolation mais avec un **filtre rampe**. Cet algorithme a l’avantage de donner une reconstruction avec moins d’artéfacts que celle obtenue avec gridrec. 
 Enfin l’algorithme “BP3D_CUBA”, permet de faire une **rétroprojection filtrée sur un objet 3D directement**.
