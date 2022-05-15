@@ -16,7 +16,7 @@ Les différents paramètres mis en lumière sont le *filtre, le centre de rotati
 
 ### Conclusion
 
-Enfin, nous pouvons conclure sur le type de filtre le plus adapté (le gaussaient flou), et conclure quant au fait que l’algorithme fbp, bien que plus long à exécuter que le gridrec, nous permet d’avoir une reconstruction de plus grande qualité.
+Enfin, nous pouvons conclure sur le type de filtre le plus adapté (le flou gaussien), et conclure quant au fait que l’algorithme fbp, bien que plus long à exécuter que le gridrec, nous permet d’avoir une reconstruction de plus grande qualité.
 
 ### Les Codes
 
