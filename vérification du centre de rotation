@@ -1,4 +1,0 @@
-for k in range(180):
-    
-    down[k, :, :]= cv2.line(down[k, :, :], (250,0),(250,700), (255,255,255),6) #tracé de la ligne pour verifier le centre de rotation
-    down[k, :, :]= cv2.line(down[k, :, :], (0,400),(500,400), (255,255,255),2) #verif perpendicularité axe rot
