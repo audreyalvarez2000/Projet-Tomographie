@@ -33,4 +33,4 @@ Tous ces codes sont répartis de la manière suivante sur GitHub:
 * Le code de notre propre algorithme
 * Les autres codes sont disponibles sur ce [lien](https://github.com/audreyalvarez2000/Projet-Tomographie/tree/Codes-s%C3%A9par%C3%A9s)
 
-Enfin le rapport complet sur notre projet est disponible ici.
+Enfin le rapport complet sur notre projet est disponible ici afin d'avoir plus d'informations sur les différents algorithmes.
