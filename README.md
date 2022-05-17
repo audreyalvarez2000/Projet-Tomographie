@@ -23,14 +23,14 @@ Enfin, nous pouvons conclure sur le type de filtre le plus adapté (le flou gaus
 Tous ces codes sont répartis de la manière suivante sur GitHub:
 
 * Le code complet qui permet de faire la reconstruction grâce à la blibliothèque tomopy avec l'algorithme gridrec est disponible [ici](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Reconstruction_Gridrec.ipynb)
-* Le code complet qui permet de faire la reconstruction grâce à la blibliothèque tomopy avec l'algorithme fbp est disponible ici
-* Le code complet qui permet de faire la reconstruction grâce à la blibliothèque tomopy  et AstraToolBox est disponible ici
+* Le code complet qui permet de faire la reconstruction grâce à la blibliothèque tomopy avec l'algorithme fbp est disponible [ici](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/reconstruction_fbp_avec_filtre.ipynb)
+* Le code complet qui permet de faire la reconstruction grâce à la blibliothèque tomopy et AstraToolBox est disponible [ici](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Astra_Toolbox.ipynb)
 * Le code pour le [centre de rotation](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Centre_de_rotation.ipynb) et sa [vérification](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Verification_centre_rotation.ipynb)
 * Les [filtres pour le traitement d'images](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Filtres_traitement_signal.ipynb)
 * La [segmentation](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/segmentation_image.ipynb)
 * La [sélection des images utiles](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Selection_image_utile.ipynb) à la reconstruction
 * Le code permettant d'[enregistrer les images de la reconstruction](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Sauvegarde_reconstruction.ipynb)
-* Le code de notre propre algorithme
+* Le code de [notre propre algorithme](https://github.com/audreyalvarez2000/Projet-Tomographie/blob/Codes-s%C3%A9par%C3%A9s/Notre_propre_algorithme.ipynb)
 * Les autres codes sont disponibles sur ce [lien](https://github.com/audreyalvarez2000/Projet-Tomographie/tree/Codes-s%C3%A9par%C3%A9s)
 
 Enfin le rapport complet sur notre projet est disponible ici afin d'avoir plus d'informations sur les différents algorithmes.
